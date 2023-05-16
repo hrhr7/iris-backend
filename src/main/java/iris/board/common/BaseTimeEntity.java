@@ -13,11 +13,11 @@ import javax.persistence.EntityListeners;
 import javax.persistence.MappedSuperclass;
 import java.time.LocalDateTime;
 
-@MappedSuperclass
-@EntityListeners(AuditingEntityListener.class)
+@MappedSuperclass //매핑정보만 상속받는 의미
+@EntityListeners(AuditingEntityListener.class) // 엔티티 db적용 전, 커스텀 콜백 요청
 @Getter
-@NoArgsConstructor
-@AllArgsConstructor
+@NoArgsConstructor // 파라미터 없는 기본 생성자 생성
+@AllArgsConstructor //모든 필드값을 파라미터로 받는 생성자 생성
 @SuperBuilder
 public class BaseTimeEntity {
     //생성시간

@@ -61,6 +61,7 @@ public class BoardController {
 
     }
 
+    /*게시글 상세페이지 조회*/
     @GetMapping("/detail/{index}")
     public ResponseEntity<DefaultResponse<Object>> boardDetail(@PathVariable Long index){
         BoardDTO boardDetail =boardService.selectByIndex(index);

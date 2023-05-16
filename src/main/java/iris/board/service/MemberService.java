@@ -52,8 +52,8 @@ public class MemberService {
         //회원 조회
         Member findOne = memberRepository.findById(updateMemberDTO.getId());
 
-         String editName= String.valueOf(memberRepository.findById(findOne.getId()));
-        findOne.editMember(editName, updateMemberDTO);
+//         String editName= String.valueOf(memberRepository.findById(findOne.getId()));
+        findOne.editMember(findOne.getName(),updateMemberDTO);
     }
 
 }
